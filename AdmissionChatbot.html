@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Chatbot</title>
+</head>
+<body>
+  <h2>Welcome to Admission Chatbot</h2>
+  <p>Ask me anything about courses or admission!</p>
+
+  <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "c970c053-19e6-4293-9502-2cc7b135dd11", // The ID of this integration.
+    region: "eu-gb", // The region your integration is hosted in.
+    serviceInstanceID: "b5919030-0a42-4338-bff9-58a6d219ad55", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
